@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Add Image</title>
+<h1 align="center">Choose Your Fruit</h1>
+<script>
+function fruitorder()
+{
+  
+if(document.getElementById("one").checked == true)
+{
+  Mycar = "1"; 
+}
+if(document.getElementById("one1").checked == true)
+{
+  Mywalk = "1";
+}
+if(document.getElementById("one2").checked == true)
+{
+  Mybus = "1";
+}
+if(document.getElementById("two").checked == true)
+{
+  Mycar = "2";
+}
+if(document.getElementById("two1").checked == true)
+{
+  Mywalk = "2";
+}
+if(document.getElementById("two2").checked == true)
+{
+  Mybus = "2";
+}
+if(document.getElementById("three").checked == true)
+{
+  Mycar = "3";
+}
+if(document.getElementById("three1").checked == true)
+{
+  Mywalk = "3";
+}
+if(document.getElementById("three2").checked == true)
+{
+  Mybus = "3";
+}
+
+document.getElementById("transport").innerHTML = Mycar;
+document.getElementById("transport1").innerHTML = Mywalk;
+document.getElementById("transport2").innerHTML = Mybus;
+document.getElementById("transport3").innerHTML = Mycar*1 + Mywalk*2 + Mybus*3;
+return false;
+
+}
+</script>
+
+</head>
+<body>
+    <br><br>
+    <p style="text-align:center;">
+    <img src="apple.jpg" width="150" alt="Logo">
+    <img src="orange.jpg" width="150" alt="Logo">
+    <img src="pineapple.jpg" width="150" alt="Logo"></p>
+    <br>
+    <form method="post" onsubmit="return fruitorder()">
+        <table align="center" border="1" width="400">
+            <tr>
+            <td>Quantity/Fruits</td><td align="30%">Type of Fruits</td>
+            </tr>
+            <tr>
+            <td>Apple$1 </td><td><input type="radio" id="one" name="Apple" value="1">1
+                              <input type="radio" id="two" name="Apple" value="2">2
+                              <input type="radio" id="three" name="Apple" value="3">3
+            </td>
+            </tr>
+            <tr>
+            <td>Orange$2 </td><td><input type="radio" id="one1" name="Orange" value="1">1
+                              <input type="radio" id="two1" name="Orange" value="2">2
+                              <input type="radio" id="three1" name="Orange" value="3">3
+            </td>
+            </tr>
+            <tr>
+            <td>Pineapple$3 </td><td><input type="radio" id="one2" name="Pineapple" value="1">1
+                              <input type="radio" id="two2" name="Pineapple" value="2">2
+                              <input type="radio" id="three2" name="Pineapple" value="3">3
+            </td>
+            </tr>
+            <tr><td><input type="submit" value="Next"></td><td>Submit your purchase!Thank You</td></tr>
+            </table>
+    </form>
+    <br><br>
+<table align="center" border="1" width="400">
+<tr>
+<td width="33%">List :</td><td align="center">The Results </td></tr>
+<tr>
+<td width="33%">Apple Quantity: </td><td><div id="transport"></div></td>
+</tr>
+<tr>
+<td width="33%">Orange Quantity: </td><td><div id="transport1"></div></td>
+</tr>
+<tr>
+<td width="33%">Pineapple Quantity: </td><td><div id="transport2"></div></td>
+</tr>
+<tr>
+  <td width="33%">Total price: </td><td><div id="transport3"></div></td>
+  </tr>
+</table>    
+</body>
+</html>
